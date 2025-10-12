@@ -168,9 +168,9 @@
 </style>
 
 <!-- ✅ SEO Tags (No visual impact) -->
-<meta name="description" content="Sainath Shivaji Mitalakar is a DevOps Engineer at T-Mobile USA. Based in India, experienced in CI/CD, Kubernetes, GitHub Actions, and Cloud.">
-<meta name="keywords" content="Sainath, Sainath Mitalakar, DevOps Engineer, T-Mobile USA, India, GitHub, Kubernetes, CI/CD, Portfolio">
-<meta name="author" content="Sainath Shivaji Mitalakar">
+<meta name="description" content="top devops engineers in india, top devops engineers in dubai, Sainath Shivaji Mitalakar is a DevOps Engineer at T-Mobile USA. Based in India, experienced in CI/CD, Kubernetes, GitHub Actions, and Cloud.">
+<meta name="keywords" content="top devops engineers in india , top devops engineers in dubai,  Sainath, Sainath Mitalakar, DevOps Engineer, T-Mobile USA, India, GitHub, Kubernetes, CI/CD, Portfolio">
+<meta name="author" content="Sainath Shivaji Mitalakar, top devops engineers in india, top devops engineers in dubai">
 <link rel="canonical" href="https://sainathmitalakar.github.io" />
 
 <!-- ✅ Google Structured Data -->
@@ -179,7 +179,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Sainath Shivaji Mitalakar",
-  "jobTitle": "DevOps Engineer",
+  "jobTitle": "DevOps Engineer, top devops engineers in india, top devops engineers in dubai",
   "worksFor": {
     "@type": "Organization",
     "name": "T-Mobile USA"
@@ -760,13 +760,13 @@ The pipeline automates code integration, testing, image building, and deployment
                font-weight: 700;
                text-transform: uppercase;
                letter-spacing: 1px;">
-      💡 DevOps Interview Drop — Terraform Secrets
+      💡 DevOps Interview Drop — ConfigMap vs Secret
     </h2>
 
     <h3 style="font-size: 1.4rem; 
                color: #f1f5f9; 
                margin-bottom: 20px;">
-      Q: <span style="color:#22d3ee;">What is the use of the <code>terraform taint</code> command, and how does it work?</span>
+      Q: <span style="color:#22d3ee;">What are the different use cases of ConfigMap and Secret in Kubernetes?</span>
     </h3>
 
     <ul style="font-size: 1.1rem; 
@@ -777,12 +777,13 @@ The pipeline automates code integration, testing, image building, and deployment
                max-width: 850px; 
                text-align: left; 
                list-style: none;">
-      <li style="margin-bottom:12px;">⚙️ <b>terraform taint</b> marks a specific resource for recreation during the next <code>terraform apply</code>.</li>
-      <li style="margin-bottom:12px;">🧩 Useful when a resource is corrupted, misconfigured, or not behaving as expected, even if your Terraform code hasn’t changed.</li>
-      <li style="margin-bottom:12px;">💥 When tainted, Terraform flags it in the <b>state file</b> as tainted.</li>
-      <li style="margin-bottom:12px;">🔁 On the next <code>terraform apply</code>, Terraform destroys and recreates that resource automatically.</li>
-      <li style="margin-bottom:12px;">🧠 It doesn’t modify your <code>.tf</code> code — it only updates the <b>state file</b>.</li>
-      <li style="margin-bottom:12px;">🚫 From Terraform <b>v0.15+</b>, <code>terraform taint</code> is deprecated. Use the <b>-replace</b> flag instead.</li>
+      <li style="margin-bottom:12px;">⚙️ <b>ConfigMap</b> is used to store non-confidential configuration data in key-value pairs.</li>
+      <li style="margin-bottom:12px;">🔐 <b>Secrets</b> are used to store sensitive information like passwords, API keys, and tokens.</li>
+      <li style="margin-bottom:12px;">🧩 Both are Kubernetes resources that decouple configuration from container images.</li>
+      <li style="margin-bottom:12px;">📦 ConfigMap values can be injected as environment variables or mounted as files.</li>
+      <li style="margin-bottom:12px;">🧠 Secrets are base64-encoded and securely stored by Kubernetes.</li>
+      <li style="margin-bottom:12px;">⚙️ Use <b>ConfigMap</b> for items like environment configs, app settings, or file paths.</li>
+      <li style="margin-bottom:12px;">🔑 Use <b>Secret</b> for credentials, certificates, SSH keys, or tokens.</li>
     </ul>
 
     <pre style="background:#1e293b;
@@ -794,18 +795,21 @@ The pipeline automates code integration, testing, image building, and deployment
                 overflow-x:auto;
                 font-size:1rem;
                 color:#a5b4fc;">
-# Mark a resource as tainted
-terraform taint aws_instance.web_server
+# ConfigMap Example
+kubectl create configmap app-config --from-literal=ENV=prod
 
-# (New method)
-terraform apply -replace="aws_instance.web_server"
+# Secret Example
+kubectl create secret generic db-cred \
+ --from-literal=username=admin \
+ --from-literal=password=Secure@123
     </pre>
 
     <p style="font-size: 1.05rem; 
               color: #a5b4fc; 
               text-align:center; 
               margin-bottom: 35px;">
-      💡 <b>Use case:</b> If an EC2 instance is running but has drifted (e.g., software misconfiguration), tainting helps rebuild it cleanly.
+      💡 <b>Pro Tip:</b> Never hardcode credentials in pods or ConfigMaps.  
+      Combine <b>Secrets</b> + <b>ConfigMaps</b> for clean, secure, reusable deployments.
     </p>
 
     <a href="https://medium.com/@sainathmitalakar" 
