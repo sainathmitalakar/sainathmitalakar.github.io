@@ -760,13 +760,13 @@ The pipeline automates code integration, testing, image building, and deployment
                font-weight: 700;
                text-transform: uppercase;
                letter-spacing: 1px;">
-      💡 DevOps Interview Drop — ConfigMap vs Secret
+      💡 DevOps Interview Drop — EC2 Public to Private Trick
     </h2>
 
     <h3 style="font-size: 1.4rem; 
                color: #f1f5f9; 
                margin-bottom: 20px;">
-      Q: <span style="color:#22d3ee;">What are the different use cases of ConfigMap and Secret in Kubernetes?</span>
+      Q: <span style="color:#22d3ee;">Can we change a public EC2 instance to private without touching the route table?</span>
     </h3>
 
     <ul style="font-size: 1.1rem; 
@@ -777,13 +777,13 @@ The pipeline automates code integration, testing, image building, and deployment
                max-width: 850px; 
                text-align: left; 
                list-style: none;">
-      <li style="margin-bottom:12px;">⚙️ <b>ConfigMap</b> is used to store non-confidential configuration data in key-value pairs.</li>
-      <li style="margin-bottom:12px;">🔐 <b>Secrets</b> are used to store sensitive information like passwords, API keys, and tokens.</li>
-      <li style="margin-bottom:12px;">🧩 Both are Kubernetes resources that decouple configuration from container images.</li>
-      <li style="margin-bottom:12px;">📦 ConfigMap values can be injected as environment variables or mounted as files.</li>
-      <li style="margin-bottom:12px;">🧠 Secrets are base64-encoded and securely stored by Kubernetes.</li>
-      <li style="margin-bottom:12px;">⚙️ Use <b>ConfigMap</b> for items like environment configs, app settings, or file paths.</li>
-      <li style="margin-bottom:12px;">🔑 Use <b>Secret</b> for credentials, certificates, SSH keys, or tokens.</li>
+      <li style="margin-bottom:12px;">✅ <b>Yes.</b> The key lies in the <b>Elastic Network Interface (ENI)</b> — it holds both Public and Private IPs.</li>
+      <li style="margin-bottom:12px;">🧩 <b>Steps:</b></li>
+      <li style="margin-left:20px; margin-bottom:8px;">1️⃣ Stop the EC2 instance (temporary public IP is released if not Elastic IP).</li>
+      <li style="margin-left:20px; margin-bottom:8px;">2️⃣ Go to the ENI in the AWS console → <b>Manage IP Addresses</b> → disable <b>Auto-Assign Public IP</b>.</li>
+      <li style="margin-left:20px; margin-bottom:8px;">3️⃣ Restart the instance — it now only has a <b>Private IP</b>.</li>
+      <li style="margin-bottom:12px;">🧠 Route table or subnet does <b>not</b> need any modification.</li>
+      <li style="margin-bottom:12px;">💡 <b>Concept:</b> Public or private nature is determined by the ENI’s IP assignment — not the instance itself.</li>
     </ul>
 
     <pre style="background:#1e293b;
@@ -795,21 +795,18 @@ The pipeline automates code integration, testing, image building, and deployment
                 overflow-x:auto;
                 font-size:1rem;
                 color:#a5b4fc;">
-# ConfigMap Example
-kubectl create configmap app-config --from-literal=ENV=prod
-
-# Secret Example
-kubectl create secret generic db-cred \
- --from-literal=username=admin \
- --from-literal=password=Secure@123
+# Steps Summary
+1. Stop EC2 instance
+2. Go to ENI → Manage IP Addresses
+3. Disable "Auto-Assign Public IP"
+4. Start instance → now private-only
     </pre>
 
     <p style="font-size: 1.05rem; 
               color: #a5b4fc; 
               text-align:center; 
               margin-bottom: 35px;">
-      💡 <b>Pro Tip:</b> Never hardcode credentials in pods or ConfigMaps.  
-      Combine <b>Secrets</b> + <b>ConfigMaps</b> for clean, secure, reusable deployments.
+      💡 <b>Pro Tip:</b> Always manage public exposure through ENI, not route tables — it keeps your networking clean and controlled.
     </p>
 
     <a href="https://medium.com/@sainathmitalakar" 
@@ -826,7 +823,7 @@ kubectl create secret generic db-cred \
               box-shadow: 0 0 20px rgba(59,130,246,0.5);
               transition: all 0.4s ease;
               animation: shine 4s infinite alternate;">
-      ⚡ 70K+ readers have explored my DevOps & System Design horror tales 💀.
+      ⚡ 70K+ readers have explored my DevOps & Cloud Q&A vault 💀
     </a>
 
     <style>
