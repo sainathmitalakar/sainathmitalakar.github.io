@@ -357,7 +357,7 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p> An accomplished and result-oriented professional with 3+ years experience in Systems Architect specializing in Cloud Services
+								<p> An accomplished and result-oriented professional with 4+ years experience in Systems Architect specializing in Cloud Services
  and DevOps, with extensive experience supporting T-Mobile USA. Proficient in Kubernetes, Docker, WebLogic, Kafka,
  Security, and Monitoring, I streamline onboarding processes and optimize system performance. Skilled in SSL Cert
  Installations, network troubleshooting, and data streaming architectures, I ensure robust and secure operations. My proactive
@@ -367,9 +367,9 @@
 									<li class="d-flex"><span>Profile:</span> <span>DevOps &amp; DevSecOps</span></li>
 									<li class="d-flex"><span>Domain:</span> <span>Telecommunications & Mobile Networks, Retail & E-commerce, BFSI (Banking, Financial Services, and Insurance), Healthcare & HealthTech, Digital Marketing & AdTech, Media & Entertainment, Cloud & SaaS Platforms, Enterprise IT & System Integration,&amp; Cybersecurity & Compliance</span></li>
 									<li class="d-flex"><span>Education:</span> <span>BE Computer Engineering - SPPU India</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi, Telugu</span></li>
+									<li class="d-flex"><span>Language:</span> <span>Arabic, English, Hindi, Marathi, Telugu, French</span></li>
 									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Docker, Kubernetes, Kafka, Monitoring , SRE &amp; DevSecOps</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Docker, Kubernetes, Kafka, Monitoring , SRE &amp; DevSecOps, Artificial Intelligence</span></li>
 									<li class="d-flex"><span>Interest:</span> <span>Open-source contributions,Technical blogging,Tech meetups & webinars</span></li>
 									
 								</ul>
@@ -700,6 +700,8 @@ The pipeline automates code integration, testing, image building, and deployment
 					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sainathmitalakar/"><span class="icon-linkedin"></span></a></li>  
 					  <li class="ftco-animate"><a href="https://x.com/saimitalakar"><span class="icon-twitter"></span></a></li>
 				      <li class="ftco-animate"><a href="https://www.instagram.com/sainathmitalakar_27?igsh=MWV3Y3VkM2JrMTYxNA%3D%3D&utm_source=qr"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.youtube.com/@ZeroOpssainath"><span class="icon-youtube"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61581697301530"><span class="icon-facebook"></span></a></li>
 					</ul>
 				<br>
 		   </div>
@@ -760,13 +762,13 @@ The pipeline automates code integration, testing, image building, and deployment
                font-weight: 700;
                text-transform: uppercase;
                letter-spacing: 1px;">
-      💡 DevOps Interview Drop — EC2 Public to Private Trick
+      💡 DevOps Interview Drop — Multi-VPC Access Control
     </h2>
 
     <h3 style="font-size: 1.4rem; 
                color: #f1f5f9; 
                margin-bottom: 20px;">
-      Q: <span style="color:#22d3ee;">Can we change a public EC2 instance to private without touching the route table?</span>
+      Q: <span style="color:#22d3ee;">How can EC2-A (in VPC-A) talk to EC2-B (in VPC-B), but be blocked from EC2-C (in the same VPC-B)?</span>
     </h3>
 
     <ul style="font-size: 1.1rem; 
@@ -777,13 +779,12 @@ The pipeline automates code integration, testing, image building, and deployment
                max-width: 850px; 
                text-align: left; 
                list-style: none;">
-      <li style="margin-bottom:12px;">✅ <b>Yes.</b> The key lies in the <b>Elastic Network Interface (ENI)</b> — it holds both Public and Private IPs.</li>
-      <li style="margin-bottom:12px;">🧩 <b>Steps:</b></li>
-      <li style="margin-left:20px; margin-bottom:8px;">1️⃣ Stop the EC2 instance (temporary public IP is released if not Elastic IP).</li>
-      <li style="margin-left:20px; margin-bottom:8px;">2️⃣ Go to the ENI in the AWS console → <b>Manage IP Addresses</b> → disable <b>Auto-Assign Public IP</b>.</li>
-      <li style="margin-left:20px; margin-bottom:8px;">3️⃣ Restart the instance — it now only has a <b>Private IP</b>.</li>
-      <li style="margin-bottom:12px;">🧠 Route table or subnet does <b>not</b> need any modification.</li>
-      <li style="margin-bottom:12px;">💡 <b>Concept:</b> Public or private nature is determined by the ENI’s IP assignment — not the instance itself.</li>
+      <li style="margin-bottom:12px;">✅ <b>Solution Steps:</b></li>
+      <li style="margin-left:20px; margin-bottom:8px;">1️⃣ Set up <b>VPC Peering</b> between VPC-A and VPC-B.</li>
+      <li style="margin-left:20px; margin-bottom:8px;">2️⃣ Update route tables in both VPCs to allow traffic between them.</li>
+      <li style="margin-left:20px; margin-bottom:8px;">3️⃣ Use <b>Security Groups</b> to permit EC2-A’s IP or SG ID in EC2-B’s SG only.</li>
+      <li style="margin-left:20px; margin-bottom:8px;">4️⃣ Ensure EC2-C’s SG does <b>not</b> allow inbound from EC2-A.</li>
+      <li style="margin-left:20px; margin-bottom:8px;">5️⃣ Optionally, use <b>Network ACLs</b> for subnet-level restrictions.</li>
     </ul>
 
     <pre style="background:#1e293b;
@@ -795,18 +796,16 @@ The pipeline automates code integration, testing, image building, and deployment
                 overflow-x:auto;
                 font-size:1rem;
                 color:#a5b4fc;">
-# Steps Summary
-1. Stop EC2 instance
-2. Go to ENI → Manage IP Addresses
-3. Disable "Auto-Assign Public IP"
-4. Start instance → now private-only
+# Result
+• EC2-A ↔ EC2-B → Allowed
+• EC2-A ↔ EC2-C → Blocked
     </pre>
 
     <p style="font-size: 1.05rem; 
               color: #a5b4fc; 
               text-align:center; 
               margin-bottom: 35px;">
-      💡 <b>Pro Tip:</b> Always manage public exposure through ENI, not route tables — it keeps your networking clean and controlled.
+      💡 <b>Pro Tip:</b> For large-scale multi-VPC setups, consider <b>AWS Transit Gateway</b> for centralized routing and fine-grained access control.
     </p>
 
     <a href="https://medium.com/@sainathmitalakar" 
