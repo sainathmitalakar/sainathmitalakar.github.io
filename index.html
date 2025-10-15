@@ -762,50 +762,34 @@ The pipeline automates code integration, testing, image building, and deployment
                font-weight: 700;
                text-transform: uppercase;
                letter-spacing: 1px;">
-      💡 DevOps Interview Drop — Multi-VPC Access Control
+      💡 A Day in the Life of a DevOps Leader
     </h2>
 
-    <h3 style="font-size: 1.4rem; 
-               color: #f1f5f9; 
-               margin-bottom: 20px;">
-      Q: <span style="color:#22d3ee;">How can EC2-A (in VPC-A) talk to EC2-B (in VPC-B), but be blocked from EC2-C (in the same VPC-B)?</span>
-    </h3>
+    <p style="font-size: 1.1rem; color:#cbd5e1; line-height:1.9; max-width:850px; margin: 0 auto 20px; text-align:left;">
+      Every morning, before the coffee kicks in ☕🐒, my DevOps routine begins with one mission: <b>stability first, innovation second</b>.
+    </p>
 
-    <ul style="font-size: 1.1rem; 
-               color: #cbd5e1; 
-               line-height: 1.9; 
-               padding-left: 0; 
-               margin: 30px auto; 
-               max-width: 850px; 
-               text-align: left; 
-               list-style: none;">
-      <li style="margin-bottom:12px;">✅ <b>Solution Steps:</b></li>
-      <li style="margin-left:20px; margin-bottom:8px;">1️⃣ Set up <b>VPC Peering</b> between VPC-A and VPC-B.</li>
-      <li style="margin-left:20px; margin-bottom:8px;">2️⃣ Update route tables in both VPCs to allow traffic between them.</li>
-      <li style="margin-left:20px; margin-bottom:8px;">3️⃣ Use <b>Security Groups</b> to permit EC2-A’s IP or SG ID in EC2-B’s SG only.</li>
-      <li style="margin-left:20px; margin-bottom:8px;">4️⃣ Ensure EC2-C’s SG does <b>not</b> allow inbound from EC2-A.</li>
-      <li style="margin-left:20px; margin-bottom:8px;">5️⃣ Optionally, use <b>Network ACLs</b> for subnet-level restrictions.</li>
+    <p style="font-size: 1.1rem; color:#cbd5e1; line-height:1.9; max-width:850px; margin: 0 auto 20px; text-align:left;">
+      As a DevOps leader 🦅, my day isn’t just about running pipelines or deployments — it’s about orchestrating chaos into clarity 🧌.
+    </p>
+
+    <p style="font-size: 1.1rem; color:#cbd5e1; line-height:1.9; max-width:850px; margin: 0 auto 20px; text-align:left;">
+      Here’s what a typical day in my DevOps leadership looks like 👽👇
+    </p>
+
+    <ul style="font-size: 1.1rem; color:#cbd5e1; line-height: 1.9; padding-left: 0; margin: 30px auto; max-width:850px; text-align:left; list-style:none;">
+      <li style="margin-bottom:12px;">👽 <b>Start of the day:</b> Scanning Jira board, reviewing tickets, priority incidents, and blockers.</li>
+      <li style="margin-bottom:12px;">👽 <b>Deployment & Release Management:</b> Leading deployments, upgrades, and hotfixes across multi-environment setups ensuring zero downtime.</li>
+      <li style="margin-bottom:12px;">👽 <b>Incident Response:</b> Responding to alerts (504, 404, downtime), restoring services, and preparing RCA.</li>
+      <li style="margin-bottom:12px;">👽 <b>Access & Security:</b> Provisioning users, enabling least-privilege policies, and maintaining DB access integrity.</li>
+      <li style="margin-bottom:12px;">👽 <b>CI/CD Troubleshooting:</b> Investigating failed builds/pipelines, diagnosing issues, and collaborating with devs.</li>
+      <li style="margin-bottom:12px;">👽 <b>Pipeline Innovation:</b> Designing and optimizing CI/CD pipelines for QA, staging, and feature environments.</li>
+      <li style="margin-bottom:12px;">👽 <b>Monitoring & Alerts:</b> Fine-tuning Grafana, Loki, Prometheus, and setting smart alerts for CPU spikes, disk utilization, and anomalies.</li>
+      <li style="margin-bottom:12px;">👽 <b>Automation & R&D:</b> Exploring new tools, POCs, and process automation to push efficiency boundaries.</li>
     </ul>
 
-    <pre style="background:#1e293b;
-                padding:20px;
-                border-radius:12px;
-                text-align:left;
-                max-width:850px;
-                margin: 0 auto 30px;
-                overflow-x:auto;
-                font-size:1rem;
-                color:#a5b4fc;">
-# Result
-• EC2-A ↔ EC2-B → Allowed
-• EC2-A ↔ EC2-C → Blocked
-    </pre>
-
-    <p style="font-size: 1.05rem; 
-              color: #a5b4fc; 
-              text-align:center; 
-              margin-bottom: 35px;">
-      💡 <b>Pro Tip:</b> For large-scale multi-VPC setups, consider <b>AWS Transit Gateway</b> for centralized routing and fine-grained access control.
+    <p style="font-size: 1.05rem; color: #a5b4fc; text-align:center; margin-bottom: 35px;">
+      At the end of the day, it’s not just about keeping systems running — it’s about leading with precision, mentoring with intent, and building reliability into every deployment 🦅.
     </p>
 
     <a href="https://medium.com/@sainathmitalakar" 
