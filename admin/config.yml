@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: sainathmitalakar/sainathmitalakar.github.io
+
+media_folder: "handbooks"  # PDFs/images go here
+public_folder: "handbooks"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "blogs"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "SEO Title", name: "seo_title", widget: "string" }
+      - { label: "SEO Description", name: "seo_description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Attach PDFs", name: "pdf", widget: "file" }
