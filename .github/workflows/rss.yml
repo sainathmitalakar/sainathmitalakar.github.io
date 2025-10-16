@@ -3,29 +3,34 @@ name: Generate RSS from index.html
 on:
   push:
     paths:
-      - 'index.html'
+      - 'index.html'   # Trigger workflow when index.html changes
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+    # Checkout code and allow pushing using GITHUB_TOKEN
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        persist-credentials: true   # Important: allows git push using GITHUB_TOKEN
+        persist-credentials: true
 
+    # Setup Python
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
+    # Install dependencies
     - name: Install dependencies
       run: pip install beautifulsoup4
 
+    # Generate RSS feed
     - name: Generate RSS
       run: python scripts/generate_rss.py
 
+    # Commit and push RSS feed back to repo
     - name: Commit and push RSS
       run: |
         git config user.name "sainathmitalakar"
