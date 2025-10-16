@@ -19,8 +19,7 @@ for art in articles:
     
     title = title_tag.text.strip() if title_tag else "Untitled Blog"
     date_text = time_tag['datetime'] if time_tag else datetime.now().strftime("%Y-%m-%d")
-    # Combine first 2 paragraphs as description
-    description = " ".join(p.text.strip() for p in p_tags[:2])
+    description = " ".join(p.text.strip() for p in p_tags[:2])  # first 2 paragraphs
     link = f"{SITE_URL}/#blog-section"
     pub_date = datetime.strptime(date_text, "%Y-%m-%d").strftime("%a, %d %b %Y %H:%M:%S +0530")
     
