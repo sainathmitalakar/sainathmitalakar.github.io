@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>Sainath Mitalakar Portfolio Blogs</title>
 <link>https://sainathmitalakar.github.io</link>
 <description>Latest blogs from Sainath Shivaji Mitalakar</description>
 <language>en-us</language>
+<atom:link href="https://sainathmitalakar.github.io/rss.xml" rel="self" type="application/rss+xml" />
 
     <item>
       <title>Daily DevOps and AI Insights: My Workflow and Productivity Tips</title>
-      <link>https://sainathmitalakar.github.io/#blog-section</link>
+      <link>https://sainathmitalakar.github.io/#blog-1</link>
       <description>Each day as a DevOps engineer begins with reviewing pipelines, &amp; checking dashboards and resolving overnight incidents. By mid-morning, I dedicate time to continuous learning: exploring new AI frameworks, testing generative AI tools, and reading technical blogs. This ensures I stay ahead of the curve in both DevOps and AI technologies. I rely heavily on automated scripts, monitoring alerts, and CI/CD dashboards to maintain uptime and optimize resource utilization. Afternoons focus on project work: deploying new features, collaborating with teams across different regions, and documenting solutions. I always allocate time to reflect on efficiency and bottlenecks, using tools like Jira, Confluence, and cloud monitoring dashboards. Evenings are dedicated to planning for tomorrow, writing blog updates, and summarizing key insights to share with the community. Maintaining a structured yet flexible daily routine maximizes both personal productivity and organizational impact.</description>
       <pubDate>Thu, 16 Oct 2025 00:00:00 +0530</pubDate>
-      <guid>https://sainathmitalakar.github.io/#blog-section</guid>
+      <guid>https://sainathmitalakar.github.io/#blog-1</guid>
     </item>
 
     <item>
       <title>Agentic AI Systems: The Next Generation of Autonomous Workflows</title>
-      <link>https://sainathmitalakar.github.io/#blog-section</link>
+      <link>https://sainathmitalakar.github.io/#blog-2</link>
       <description>Agentic AI represents a fundamental shift from reactive AI tools, like chatbots, to proactive systems capable of planning, reflecting, and executing tasks autonomously. Unlike traditional models, agentic AI can perform multi-step reasoning, manage workflows, and interact with external APIs without constant human intervention. Frameworks such as LangGraph, CrewAI, and AutoGPT are popular tools enabling developers to build agentic workflows for real-world applications. Enterprises can leverage agentic AI for complex tasks such as automated document analysis, DevOps pipeline optimization, and even autonomous IT incident response. A successful deployment requires careful architecture: Planner/Executor patterns, robust error handling, and integration with existing monitoring systems. Ethical considerations, like human oversight and accountability, remain essential, especially when agents have access to sensitive information. As 2025 progresses, agentic AI will be central to achieving productivity gains in technology-driven organizations.</description>
       <pubDate>Wed, 15 Oct 2025 00:00:00 +0530</pubDate>
-      <guid>https://sainathmitalakar.github.io/#blog-section</guid>
+      <guid>https://sainathmitalakar.github.io/#blog-2</guid>
     </item>
 
     <item>
       <title>Optimizing Kubernetes Clusters for Maximum Efficiency</title>
-      <link>https://sainathmitalakar.github.io/#blog-section</link>
-      <description>Kubernetes has become the de facto standard for container orchestration in modern DevOps workflows. While many teams focus on uptime, a healthy cluster doesn’t always mean an efficient one. Over-provisioned nodes, idle pods, and oversized resource requests are common problems that waste compute power and increase costs. To truly optimize, engineers should implement horizontal and vertical pod autoscaling, analyze utilization metrics, and leverage node taints and affinity rules to distribute workloads effectively. Monitoring plays a critical role in cluster optimization. Tools like Prometheus, Grafana, and KEDA allow you to measure real-time utilization, detect idle resources, and automatically scale workloads. Additionally, adopting infrastructure-as-code approaches using Terraform or Pulumi ensures consistency across multiple environments. Finally, continuous review of resource quotas and limits prevents runaway processes from consuming unnecessary CPU or memory, helping teams save on cloud costs while maintaining reliability.</description>
+      <link>https://sainathmitalakar.github.io/#blog-3</link>
+      <description>Kubernetes has become the de facto standard for container orchestration in modern DevOps workflows. While many teams focus on uptime, a healthy cluster doesn’t always mean an efficient one. Over-provisioned nodes, idle pods, and oversized resource requests are common problems that waste compute power and increase costs. To truly optimize, engineers should implement horizontal and vertical pod autoscaling, analyze utilization metrics, and leverage node taints and affinity rules to distribute workloads effectively. Monitoring plays a critical role in a cluster optimization. Tools like Prometheus, Grafana, and KEDA allow you to measure real-time utilization, detect idle resources, and automatically scale workloads. Additionally, adopting infrastructure-as-code approaches using Terraform or Pulumi ensures consistency across multiple environments. Finally, continuous review of resource quotas and limits prevents runaway processes from consuming unnecessary CPU or memory, helping teams save on cloud costs while maintaining reliability.</description>
       <pubDate>Tue, 14 Oct 2025 00:00:00 +0530</pubDate>
-      <guid>https://sainathmitalakar.github.io/#blog-section</guid>
+      <guid>https://sainathmitalakar.github.io/#blog-3</guid>
     </item>
 
 </channel>
