@@ -1,94 +1,78 @@
-# Sainath Shivaji Mitalakar | Senior DevOps Engineer & System Architect
+# 👋 Sainath Shivaji Mitalakar
 
-![AWS Certified DevOps Engineer](https://img.shields.io/badge/AWS%20Certified-DevOps%20Engineer-brightgreen)
-![Top 25 Thinkers360 Leader](https://img.shields.io/badge/Thinkers360-Top%2025-blue)
-![LinkedIn](https://img.shields.io/badge/LinkedIn-Sainath%20Mitalakar-blue)
-![GitHub Followers](https://img.shields.io/github/followers/sainathmitalakar?label=Followers)
+**Senior DevOps Engineer | System Architect | AWS Certified DevOps Professional | Top 25 Thinkers360 Leader**
 
 ---
 
-## 👋 About Me
-I am a **Senior DevOps Engineer and System Architect** based in **Dubai**, specializing in **AWS, Kubernetes, CI/CD, Cloud Automation, Infrastructure as Code, and Scalable Systems**.  
-Recognized as a **Top 25 Thought Leader on Thinkers360**, I share technical insights through blogs, projects, and professional contributions.
+## 💻 About Me
+Hi! I'm Sainath Shivaji Mitalakar, a passionate **DevOps Engineer** and **System Architect** based in Dubai. I help organizations optimize cloud infrastructure, automate workflows, and achieve **maximum efficiency in DevOps pipelines**.  
+
+I specialize in:  
+- **CI/CD Automation** (Jenkins, GitHub Actions)  
+- **Kubernetes & Cloud Optimization**  
+- **Infrastructure as Code** (Terraform, Pulumi)  
+- **AI & Agentic Workflows**  
+- **Monitoring & Observability** (Prometheus, Grafana)  
 
 ---
 
-## 📰 Latest Blogs
-Stay updated with my professional blogs and DevOps/AI insights:  
-[RSS Feed](https://sainathmitalakar.github.io/rss.xml)  
+## 🌐 Portfolio & Blogs
+- 🔗 [Portfolio Website](https://sainathmitalakar.github.io)  
+- 📰 [Daily Technical Blogs RSS](https://sainathmitalakar.github.io/rss.xml)  
+- 📚 [Latest Blogs Section](https://sainathmitalakar.github.io/#blog-section)
 
 ---
 
-## 💻 Skills & Expertise
-- **Cloud & DevOps:** AWS, Azure, Kubernetes, Docker, CI/CD, GitHub Actions
-- **Automation & Infrastructure:** Terraform, Pulumi, Scripting (Python, Bash)
-- **Monitoring & Optimization:** Prometheus, Grafana, KEDA, CloudWatch
-- **AI & Emerging Tech:** Agentic AI, Generative AI, Autonomous Workflows
-- **Collaboration Tools:** Jira, Confluence, Slack, GitHub, Teams
+## 📊 Achievements & Certifications
+- 🏆 Top 25 Thought Leader – Thinkers360  
+- ☁️ AWS Certified DevOps Engineer – Professional  
+- 💼 Senior DevOps Engineer & System Architect  
+- 🌍 Working globally with top cloud technologies  
 
 ---
 
-## 🏆 Achievements & Recognition
-- **AWS Certified DevOps Engineer – Professional**
-- **Top 25 Tech Thought Leader – Thinkers360**
-- **Contributor to open-source DevOps projects**
-- **Published blogs with daily/weekly updates**
-- **Senior DevOps Engineer & System Architect – Dubai**
+## 🔗 Connect with Me
+<p align="left">
+  <a href="https://www.linkedin.com/in/sainathmitalakar/" target="_blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/linkedin.svg" alt="LinkedIn" height="30" width="30" />
+  </a>
+  <a href="https://twitter.com/saimitalakar" target="_blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/twitter.svg" alt="Twitter" height="30" width="30" />
+  </a>
+  <a href="https://www.thinkers360.com/sainathmitalakar/" target="_blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/thinkers360.svg" alt="Thinkers360" height="30" width="30" />
+  </a>
+  <a href="mailto:sainath8855@gmail.com" target="_blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/gmail.svg" alt="Email" height="30" width="30" />
+  </a>
+</p>
 
 ---
 
-## 📂 Projects & Portfolio
-- [GitHub Portfolio](https://github.com/sainathmitalakar)
-- [My Personal Website](https://sainathmitalakar.github.io)
-- Featured blogs and DevOps projects with practical workflows and automation solutions.
+## 📈 Skills & Tools
+<p align="left">
+  <img src="https://img.shields.io/badge/DevOps-Kubernetes-blue?style=flat-square&logo=kubernetes" />
+  <img src="https://img.shields.io/badge/CI/CD-Jenkins-red?style=flat-square&logo=jenkins" />
+  <img src="https://img.shields.io/badge/Cloud-AWS-orange?style=flat-square&logo=amazon-aws" />
+  <img src="https://img.shields.io/badge/IaC-Terraform-lightblue?style=flat-square&logo=terraform" />
+  <img src="https://img.shields.io/badge/Monitoring-Prometheus-yellow?style=flat-square&logo=prometheus" />
+  <img src="https://img.shields.io/badge/GitHub Actions-purple?style=flat-square&logo=githubactions" />
+  <img src="https://img.shields.io/badge/AI-AgenticAI-pink?style=flat-square" />
+</p>
 
 ---
 
-## 📈 Professional Summary
-I build **robust, scalable, and automated systems** that enable organizations to achieve **high availability, efficiency, and innovation**.  
-I actively share insights on DevOps, AI, and cloud technologies through my blogs, helping the community and aspiring engineers.
+## 📢 Latest Blogs
+1. [Daily DevOps & AI Insights: My Workflow and Productivity Tips](https://sainathmitalakar.github.io/#blog-section)  
+2. [Agentic AI Systems: The Next Generation of Autonomous Workflows](https://sainathmitalakar.github.io/#blog-section)  
+3. [Optimizing Kubernetes Clusters for Maximum Efficiency](https://sainathmitalakar.github.io/#blog-section)  
 
 ---
 
-## 🔗 Connect With Me
-- **LinkedIn:** [Sainath Shivaji Mitalakar](https://www.linkedin.com/in/sainathmitalakar/)
-- **Twitter:** [@saimitalakar](https://twitter.com/saimitalakar)
-- **Thinkers360:** [Top 25 Leader](https://www.thinkers360.com/sainathmitalakar/)
-- **Email:** sainath8855@gmail.com
+### ⚡ Fun Fact
+I love combining **DevOps, Cloud, and AI** to build **highly efficient, autonomous systems**. 🚀  
 
 ---
 
-## 📝 SEO & Keywords
-DevOps Expert, AWS Certified DevOps Engineer, Kubernetes, CI/CD, Cloud Automation, Infrastructure as Code, DevOps Dubai, Top 25 Thought Leader, Thinkers360, Technical Blogs, System Architect, Agentic AI, AI Workflows.
+**Let’s connect and create something amazing!**
 
----
-
-## ⚡ Quick Links
-- **Latest Blog Posts:** [RSS Feed](https://sainathmitalakar.github.io/rss.xml)
-- **Portfolio:** [My Website](https://sainathmitalakar.github.io)
-- **GitHub:** [Projects & Repos](https://github.com/sainathmitalakar)
-
----
-
-### JSON-LD Schema (for website SEO)
-Add this inside your GitHub Pages `<head>`:
-
-```html
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sainath Shivaji Mitalakar",
-  "url": "https://sainathmitalakar.github.io",
-  "sameAs": [
-    "https://www.linkedin.com/in/sainathmitalakar/",
-    "https://twitter.com/saimitalakar",
-    "https://www.thinkers360.com/sainathmitalakar/"
-  ],
-  "jobTitle": "Senior DevOps Engineer & System Architect",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Your Company Name"
-  }
-}
-</script>
