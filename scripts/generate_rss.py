@@ -1,77 +1,59 @@
 from bs4 import BeautifulSoup
 from datetime import datetime
-import html
+import xml.etree.ElementTree as ET
 
-# -------------- CONFIGURATION ----------------
-SITE_URL = "https://sainathmitalakar.github.io"
+# ------------------- CONFIG -------------------
+INDEX_HTML_FILE = "index.html"
 RSS_FILE = "rss.xml"
-# ---------------------------------------------
+SITE_URL = "https://sainathmitalakar.github.io"
+FEED_TITLE = "Sainath Mitalakar Portfolio Blogs"
+FEED_DESC = "Latest blogs from Sainath Shivaji Mitalakar"
+FEED_LANG = "en-us"
+# ----------------------------------------------
 
-# Load index.html
-with open("index.html", "r", encoding="utf-8") as f:
+# Load and parse index.html
+with open(INDEX_HTML_FILE, "r", encoding="utf-8") as f:
     soup = BeautifulSoup(f, "html.parser")
 
-# Select all blog articles
-articles = soup.select("#blog-posts article")
+articles = soup.find_all("article")
 
-# Function to parse date
-def parse_date(art):
-    time_tag = art.find("time")
-    if time_tag and 'datetime' in time_tag.attrs:
-        return datetime.strptime(time_tag['datetime'], "%Y-%m-%d")
-    return datetime.now()
+# Create RSS structure
+rss = ET.Element("rss", version="2.0")
+channel = ET.SubElement(rss, "channel")
+ET.SubElement(channel, "title").text = FEED_TITLE
+ET.SubElement(channel, "link").text = SITE_URL
+ET.SubElement(channel, "description").text = FEED_DESC
+ET.SubElement(channel, "language").text = FEED_LANG
 
-# Sort articles newest first
-articles = sorted(articles, key=parse_date, reverse=True)
+for article in articles:
+    # Unique article ID
+    article_id = article.get("id", "")
+    if not article_id:
+        continue  # skip if no id
 
-items = []
-for idx, art in enumerate(articles, 1):
-    title_tag = art.find("h2")
-    time_tag = art.find("time")
-    p_tags = art.find_all("p")
-    
-    # Get title
-    title = html.escape(title_tag.text.strip()) if title_tag else f"Blog {idx}"
-    
-    # Get description (first 2 paragraphs)
-    description = " ".join(html.escape(p.text.strip()) for p in p_tags[:2])
-    
-    # Date
-    date_text = time_tag['datetime'] if time_tag else datetime.now().strftime("%Y-%m-%d")
-    pub_date = datetime.strptime(date_text, "%Y-%m-%d").strftime("%a, %d %b %Y %H:%M:%S +0530")
-    
-    # Unique slug for link and guid
-    slug = "-".join(title.lower().split())
-    link = f"{SITE_URL}/#blog-{slug}"
-    guid = link
-    
-    # Build item
-    items.append(f"""
-    <item>
-      <title>{title}</title>
-      <link>{link}</link>
-      <description>{description}</description>
-      <pubDate>{pub_date}</pubDate>
-      <guid>{guid}</guid>
-    </item>
-""")
+    title_tag = article.find("h2")
+    time_tag = article.find("time")
+    description_tag = article.find_all("p")
 
-# Full RSS content with self-link
-rss_content = f"""<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-<title>Sainath Mitalakar Portfolio Blogs</title>
-<link>{SITE_URL}</link>
-<description>Latest blogs from Sainath Shivaji Mitalakar</description>
-<language>en-us</language>
-<atom:link href="{SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
-{''.join(items)}
-</channel>
-</rss>
-"""
+    # Extract data
+    title = title_tag.get_text(strip=True) if title_tag else "No Title"
+    pub_date = time_tag.get("datetime") if time_tag else datetime.now().strftime("%Y-%m-%d")
+    description = " ".join(p.get_text(strip=True) for p in description_tag)
+    link = f"{SITE_URL}/#{article_id}"
 
-# Write to rss.xml
-with open(RSS_FILE, "w", encoding="utf-8") as f:
-    f.write(rss_content)
+    # Format pubDate in RFC 2822 format
+    pub_date_rfc2822 = datetime.strptime(pub_date, "%Y-%m-%d").strftime("%a, %d %b %Y %H:%M:%S +0530")
 
-print(f"RSS feed generated: {RSS_FILE}")
+    # Create RSS item
+    item = ET.SubElement(channel, "item")
+    ET.SubElement(item, "title").text = title
+    ET.SubElement(item, "link").text = link
+    ET.SubElement(item, "description").text = description
+    ET.SubElement(item, "pubDate").text = pub_date_rfc2822
+    ET.SubElement(item, "guid").text = link  # unique guid for each blog
+
+# Write RSS file
+tree = ET.ElementTree(rss)
+tree.write(RSS_FILE, encoding="utf-8", xml_declaration=True)
+
+print(f"RSS feed generated successfully: {RSS_FILE}")

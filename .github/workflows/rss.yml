@@ -1,42 +1,35 @@
-name: Generate RSS from index.html
+name: Generate RSS
 
 on:
   push:
-    paths:
-      - 'index.html'   # Trigger workflow when index.html changes
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout code and allow pushing using GITHUB_TOKEN
-    - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        persist-credentials: true
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    # Setup Python
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
 
-    # Install dependencies
-    - name: Install dependencies
-      run: pip install beautifulsoup4
+      - name: Install dependencies
+        run: pip install beautifulsoup4 lxml
 
-    # Generate RSS feed
-    - name: Generate RSS
-      run: python scripts/generate_rss.py
+      - name: Generate RSS
+        run: python scripts/generate_rss.py
 
-    # Commit and push RSS feed safely
-    - name: Commit and push RSS
-      run: |
-        git config user.name "sainathmitalakar"
-        git config user.email "sainath8855@gmail.com"
-        git add rss.xml
-        # Only commit if there are changes
-        git diff --cached --quiet || git commit -m "Auto-update RSS feed"
-        # Push, but ignore errors to prevent workflow failure
-        git push || echo "Push failed, ignoring."
+      - name: Commit and push RSS
+        run: |
+          git config user.name "Sainath Mitalakar"
+          git config user.email "sainath8855@gmail.com"
+          git add rss.xml
+          git commit -m "Auto-update RSS feed" || echo "No changes"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
