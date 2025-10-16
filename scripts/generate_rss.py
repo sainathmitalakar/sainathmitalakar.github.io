@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from datetime import datetime
+import html
 
 SITE_URL = "https://sainathmitalakar.github.io"
 RSS_FILE = "rss.xml"
@@ -11,15 +12,24 @@ with open("index.html", "r", encoding="utf-8") as f:
 # Find all blog articles
 articles = soup.select("#blog-posts article")
 
+# Sort articles by date (newest first)
+def parse_date(art):
+    time_tag = art.find("time")
+    if time_tag and 'datetime' in time_tag.attrs:
+        return datetime.strptime(time_tag['datetime'], "%Y-%m-%d")
+    return datetime.now()
+
+articles = sorted(articles, key=parse_date, reverse=True)
+
 items = []
 for art in articles:
     title_tag = art.find("h2")
     time_tag = art.find("time")
     p_tags = art.find_all("p")
     
-    title = title_tag.text.strip() if title_tag else "Untitled Blog"
+    title = html.escape(title_tag.text.strip()) if title_tag else "Untitled Blog"
     date_text = time_tag['datetime'] if time_tag else datetime.now().strftime("%Y-%m-%d")
-    description = " ".join(p.text.strip() for p in p_tags[:2])  # first 2 paragraphs
+    description = " ".join(html.escape(p.text.strip()) for p in p_tags[:2])  # first 2 paragraphs
     link = f"{SITE_URL}/#blog-section"
     pub_date = datetime.strptime(date_text, "%Y-%m-%d").strftime("%a, %d %b %Y %H:%M:%S +0530")
     

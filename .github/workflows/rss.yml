@@ -30,11 +30,13 @@ jobs:
     - name: Generate RSS
       run: python scripts/generate_rss.py
 
-    # Commit and push RSS feed back to repo
+    # Commit and push RSS feed safely
     - name: Commit and push RSS
       run: |
         git config user.name "sainathmitalakar"
         git config user.email "sainath8855@gmail.com"
         git add rss.xml
-        git commit -m "Auto-update RSS feed" || echo "No changes"
-        git push
+        # Only commit if there are changes
+        git diff --cached --quiet || git commit -m "Auto-update RSS feed"
+        # Push, but ignore errors to prevent workflow failure
+        git push || echo "Push failed, ignoring."
