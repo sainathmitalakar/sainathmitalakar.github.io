@@ -5,14 +5,11 @@ import html
 SITE_URL = "https://sainathmitalakar.github.io"
 RSS_FILE = "rss.xml"
 
-# Open index.html
 with open("index.html", "r", encoding="utf-8") as f:
     soup = BeautifulSoup(f, "html.parser")
 
-# Find all blog articles
 articles = soup.select("#blog-posts article")
 
-# Sort articles by date (newest first)
 def parse_date(art):
     time_tag = art.find("time")
     if time_tag and 'datetime' in time_tag.attrs:
@@ -22,15 +19,17 @@ def parse_date(art):
 articles = sorted(articles, key=parse_date, reverse=True)
 
 items = []
-for art in articles:
+for idx, art in enumerate(articles, 1):
     title_tag = art.find("h2")
     time_tag = art.find("time")
     p_tags = art.find_all("p")
     
     title = html.escape(title_tag.text.strip()) if title_tag else "Untitled Blog"
     date_text = time_tag['datetime'] if time_tag else datetime.now().strftime("%Y-%m-%d")
-    description = " ".join(html.escape(p.text.strip()) for p in p_tags[:2])  # first 2 paragraphs
-    link = f"{SITE_URL}/#blog-section"
+    description = " ".join(html.escape(p.text.strip()) for p in p_tags[:2])
+    
+    # unique link per blog
+    link = f"{SITE_URL}/#blog-{idx}"
     pub_date = datetime.strptime(date_text, "%Y-%m-%d").strftime("%a, %d %b %Y %H:%M:%S +0530")
     
     items.append(f"""
@@ -44,12 +43,13 @@ for art in articles:
 """)
 
 rss_content = f"""<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>Sainath Mitalakar Portfolio Blogs</title>
 <link>{SITE_URL}</link>
 <description>Latest blogs from Sainath Shivaji Mitalakar</description>
 <language>en-us</language>
+<atom:link href="{SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
 {''.join(items)}
 </channel>
 </rss>
