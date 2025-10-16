@@ -3,7 +3,7 @@ name: Generate RSS from index.html
 on:
   push:
     paths:
-      - 'index.html'   # Trigger workflow when index.html changes
+      - 'index.html'
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        persist-credentials: true
+        persist-credentials: true   # Important: allows git push using GITHUB_TOKEN
 
     - name: Setup Python
       uses: actions/setup-python@v4
