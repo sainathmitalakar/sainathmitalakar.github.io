@@ -39,7 +39,7 @@ I specialize in:
   <a href="https://twitter.com/saimitalakar" target="_blank">
     <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/twitter.svg" alt="Twitter" height="30" width="30" />
   </a>
-  <a href="https://www.thinkers360.com/sainathmitalakar/" target="_blank">
+  <a href="https://www.thinkers360.com/tl/profiles/view/31566" target="_blank">
     <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/thinkers360.svg" alt="Thinkers360" height="30" width="30" />
   </a>
   <a href="mailto:sainath8855@gmail.com" target="_blank">
