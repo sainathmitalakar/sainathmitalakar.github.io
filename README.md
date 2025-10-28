@@ -1,6 +1,6 @@
 # 👋 Sainath Shivaji Mitalakar
 
-**Senior DevOps Engineer | System Architect | AWS Certified DevOps Professional | Top 25 Thinkers360 Leader**
+**Senior DevOps Engineer | System Architect | AWS Certified DevOps Professional | Top 25 Thinkers360 Leader **
 
 ---
 
