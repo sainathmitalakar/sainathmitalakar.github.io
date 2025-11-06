@@ -826,6 +826,125 @@ The company focuses on leveraging modern technologies to build scalable, reliabl
 
     <main id="blog-posts">
 
+<!-- ================== ZERO TRUST CI/CD BLOG (Today - November 06, 2025) ================== -->
+<article id="blog-2025-11-06"
+  style="background:#0d1117; color:#e6edf3; padding:2rem; margin-bottom:2rem; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08);">
+
+  <h2 style="color:#58a6ff;">Zero Trust CI/CD: Building Secure Pipelines for Cloud-native Apps</h2>
+  <time datetime="2025-11-06" style="color:#8b949e;">November 6, 2025</time>
+
+  <p>
+    The modern software delivery pipeline is fast, automated, and distributed — but that speed introduces risk.  
+    The <strong style="color:#79c0ff;">Zero Trust</strong> model brings a new security mindset to CI/CD: 
+    <strong>"Never trust, always verify."</strong>  
+    It redefines how developers, systems, and services interact within your pipeline to ensure that security isn’t an afterthought, but a foundation.
+  </p>
+
+  <p>
+    In a Zero Trust CI/CD framework, every entity — whether human or machine — must continuously authenticate, authorize, 
+    and validate before interacting with your build or deploy environment. This drastically reduces the attack surface 
+    and ensures no single compromised credential can jeopardize your cloud infrastructure.
+  </p>
+
+  <h3 style="color:#ffa657;">Core Principles of Zero Trust in CI/CD</h3>
+
+  <p>
+    • <strong>Identity Verification Everywhere:</strong> Every user, tool, and system must be verified before access.<br>
+    • <strong>Least Privilege Access:</strong> Grant only what’s necessary for a specific task.<br>
+    • <strong>Continuous Monitoring:</strong> Track all activity in build and deployment stages.<br>
+    • <strong>Micro-segmentation:</strong> Isolate environments like DEV, QA, and PROD.<br>
+    • <strong>Assume Breach:</strong> Design systems expecting that intrusions can happen anytime.
+  </p>
+
+  <h3 style="color:#79c0ff;">Technical Breakdown</h3>
+
+  <p>
+    1. <strong>Secure Identity Management:</strong>  
+    Integrate IAM, SSO, or OIDC-based authentication for developers, build agents, and automation bots.
+  </p>
+
+  <p>
+    2. <strong>Ephemeral Runners:</strong>  
+    Use short-lived build agents that auto-destroy after each job (e.g., GitHub Actions ephemeral runners, GitLab autoscaling runners).
+  </p>
+
+  <p>
+    3. <strong>Policy-as-Code:</strong>  
+    Implement policy checks (e.g., with Open Policy Agent or Sentinel) in your CI/CD workflows to enforce compliance and governance rules automatically.
+  </p>
+
+  <p>
+    4. <strong>Encrypted Artifact Signing:</strong>  
+    Sign build artifacts using tools like 
+    <a href="https://sigstore.dev/" target="_blank" style="color:#58a6ff;">Sigstore</a> or 
+    <a href="https://github.com/sigstore/cosign" target="_blank" style="color:#58a6ff;">Cosign</a> 
+    to ensure integrity and provenance before deployment.
+  </p>
+
+  <p>
+    5. <strong>Zero Trust Networking:</strong>  
+    Use service meshes like Istio or Linkerd to enforce mTLS between microservices, ensuring only authorized workloads communicate securely.
+  </p>
+
+  <h3 style="color:#56d364;">Best Practices</h3>
+
+  <p>
+    • Enforce MFA (Multi-Factor Authentication) for all CI/CD users.<br>
+    • Rotate access tokens regularly and use secrets managers for injection.<br>
+    • Apply branch protection rules to prevent direct merges to main.<br>
+    • Integrate continuous compliance checks and vulnerability scans.<br>
+    • Use audit logging and alerts for every sensitive pipeline operation.
+  </p>
+
+  <h3 style="color:#ff7b72;">Common Pitfalls to Avoid</h3>
+
+  <p>
+    • Storing credentials directly in pipeline configuration files.<br>
+    • Using long-lived access tokens for bots or service accounts.<br>
+    • Allowing shared credentials across multiple environments.<br>
+    • Ignoring identity validation for internal automation tools.<br>
+    • Failing to track changes and access attempts in audit logs.
+  </p>
+
+  <p>
+    Building a Zero Trust CI/CD pipeline is not about complexity — it’s about clarity.  
+    It aligns security with automation, ensuring your software delivery process remains fast, compliant, and resilient 
+    against internal and external threats.
+  </p>
+
+  <p style="margin-top:1rem; color:#8b949e;">Tags: 
+    <strong>#ZeroTrust</strong> <strong>#CICD</strong> 
+    <strong>#CloudSecurity</strong> <strong>#DevSecOps</strong> 
+    <strong>#Automation</strong> <strong>#PolicyAsCode</strong>
+  </p>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Zero Trust CI/CD: Building Secure Pipelines for Cloud-native Apps",
+    "author": { "@type": "Person", "name": "Sainath Shivaji Mitalakar" },
+    "datePublished": "2025-11-06",
+    "url": "https://sainathmitalakar.github.io/#blog-2025-11-06",
+    "description": "Explore how to apply Zero Trust principles to CI/CD pipelines to enhance security, integrity, and compliance for cloud-native applications.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sainath Shivaji Mitalakar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sainathmitalakar.github.io/assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://sainathmitalakar.github.io/"
+    }
+  }
+  </script>
+</article>
+
+
 <!-- ================== SECRETS MANAGEMENT IN DEVOPS (November 05, 2025) ================== -->
 <article id="blog-2025-11-05"
   style="background:#0d1117; color:#e6edf3; padding:2rem; margin-bottom:2rem; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.08);">
