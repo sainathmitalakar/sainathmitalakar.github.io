@@ -931,6 +931,154 @@ Context Engine - Intelligent DevOps Activity Tracker</p>
     </header>
 
     <main id="blog-posts">
+      <!-- ================== BLOG (December 4, 2025) ================== -->
+<article id="blog-2025-12-04"
+  style="background:#0d1117; color:#e6edf3; padding:2.5rem; margin-bottom:2rem; border-radius:14px;
+         box-shadow:0 3px 14px rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.08);">
+
+  <h2 style="color:#58a6ff;">Scaling an Application from 10K to 1M Users — My DevOps Approach</h2>
+  <time datetime="2025-12-04" style="color:#8b949e;">December 4, 2025</time>
+
+  <p>
+    Growing an application from a few thousand users to a million is not a single technical change — it’s a mindset shift.
+    Scale requires predictable automation, resilient architecture, observability-first operations, and a culture that treats
+    performance and reliability as continuous deliverables. As Lead Ambassador for Infracodebase at Onward Platforms, I’ve helped
+    teams transform product launches into repeatable, scalable outcomes using a pragmatic DevOps playbook.
+  </p>
+
+  <p style="font-size:1.12rem; color:#ffa657;">
+    <strong>Scaling is an engineering discipline — automate everything, measure everything, and design for graceful degradation.</strong>
+  </p>
+
+  <h3 style="color:#79c0ff;">High-level Strategy</h3>
+
+  <p>
+    • Prioritize bottleneck identification through real traffic testing and profiling.<br>
+    • Convert single points of failure into horizontally scalable services.<br>
+    • Automate deployment, rollback, and capacity management via GitOps and CI/CD.<br>
+    • Shift-left performance testing: integrate load and soak tests in pipelines.
+  </p>
+
+  <h3 style="color:#56d364;">Technical Breakdown</h3>
+
+  <p>
+    1. <strong>Architecture Patterns:</strong><br>
+       Move to microservices or modular monolith segments to isolate scale domains (auth, API, ingestion, realtime).  
+       Use domain-driven partitioning to scale the parts that need scale.
+  </p>
+
+  <p>
+    2. <strong>Autoscaling & Capacity:</strong><br>
+       Leverage horizontal pod autoscaling (HPA/VPA) on Kubernetes, cluster autoscaler, and cloud autoscaling groups.  
+       Implement predictive scaling using traffic patterns and AI-driven forecasts to warm capacity before spikes.
+  </p>
+
+  <p>
+    3. <strong>Edge & CDN:</strong><br>
+       Cache static assets and edge-render where possible using CDNs and edge functions to reduce origin load and latency.
+  </p>
+
+  <p>
+    4. <strong>Caching & Data Strategy:</strong><br>
+       Use multi-layer caching (CDN, reverse proxy, in-memory caches like Redis) and TTL strategies.  
+       For databases, implement read replicas, sharding/partitioning, and CQRS patterns where appropriate.
+  </p>
+
+  <p>
+    5. <strong>Message-Driven Architecture:</strong><br>
+       Offload heavy or asynchronous work using durable queues (Kafka, RabbitMQ, SQS). Use backpressure and consumer scaling to smooth ingestion spikes.
+  </p>
+
+  <p>
+    6. <strong>CI/CD & Release Safety:</strong><br>
+       GitOps pipelines, automated canary and blue-green releases, feature flags for progressive rollout, and automated rollback on health checks.
+  </p>
+
+  <p>
+    7. <strong>Observability & SLOs:</strong><br>
+       Define SLOs and error budgets. Centralize metrics, logs, and traces (Prometheus, OpenTelemetry, Loki, Grafana).  
+       Use real-time alerting and automated remediation playbooks.
+  </p>
+
+  <p>
+    8. <strong>Performance Testing in Pipeline:</strong><br>
+       Integrate load, stress, and soak tests into CI; use realistic traffic replay and synthetic user journeys before production rollout.
+  </p>
+
+  <p>
+    9. <strong>Database Migrations & Schema Evolution:</strong><br>
+       Use backward-compatible migrations, pre-warming of indexes, and phased cutovers to avoid downtime during schema changes.
+  </p>
+
+  <p>
+    10. <strong>Security & Rate Limits:</strong><br>
+       Protect APIs with rate limiting, WAFs, and token-based throttling. Implement circuit breakers to protect downstream systems.
+  </p>
+
+  <h3 style="color:#ff7b72;">Operational Playbook</h3>
+
+  <p>
+    • Implement runbooks and playbooks as code; automate incident runbook steps where safe.<br>
+    • Use chaos engineering to validate failure modes and recovery time objectives.<br>
+    • Automate cost monitoring and right-sizing to maintain efficiency at scale.<br>
+    • Invest in observability-driven runways: deploy dashboards and anomaly detection before traffic growth.
+  </p>
+
+  <h3 style="color:#ffa657;">Scaling Checklist (Quick Wins)</h3>
+
+  <p>
+    • Enable CDNs for all static content.<br>
+    • Add read replicas and caching for hot database reads.<br>
+    • Introduce rate limiting and graceful degradation paths.<br>
+    • Automate horizontal scaling and cluster provisioning.<br>
+    • Add canary releases and feature flags for new features.<br>
+    • Integrate synthetic monitoring for core user journeys.
+  </p>
+
+  <h3 style="color:#79c0ff;">Ambassador Insight</h3>
+
+  <p>
+    Scaling from 10K to 1M users is as much cultural as it is technical. Teams succeed when they treat scalability as code:
+    versioned infrastructure, testable performance benchmarks, and automated remediation. Infracodebase helps organizations
+    capture these patterns as reusable blueprints — turning one-off scaling projects into repeatable engineering practice.
+  </p>
+
+  <p>
+    Build in observability first, automate the mundane, and design systems to fail gracefully — that’s how you make growth sustainable.
+  </p>
+
+  <p style="margin-top:1rem; color:#8b949e;">
+    Tags: <strong>#Scaling</strong> <strong>#SRE</strong> <strong>#Kubernetes</strong> <strong>#GitOps</strong>
+           <strong>#Observability</strong> <strong>#Infracodebase</strong> <strong>#PlatformEngineering</strong>
+           <strong>#AmbassadorInsights</strong>
+  </p>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Scaling an Application from 10K to 1M Users — My DevOps Approach",
+    "author": { "@type": "Person", "name": "Sainath Shivaji Mitalakar" },
+    "datePublished": "2025-12-04",
+    "url": "https://sainathmitalakar.github.io/#blog-2025-12-04",
+    "description": "A practical ambassador-led DevOps playbook for scaling applications from 10K to 1M users: architecture, CI/CD, observability, and operational best practices.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sainath Shivaji Mitalakar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sainathmitalakar.github.io/assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://sainathmitalakar.github.io/"
+    }
+  }
+  </script>
+</article>
+
       <!-- ================== BLOG (December 3, 2025) ================== -->
 <article id="blog-2025-12-03"
   style="background:#0d1117; color:#e6edf3; padding:2.5rem; margin-bottom:2rem; border-radius:14px;
