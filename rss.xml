@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>Google’s AI-Native Architecture: How Google Builds Systems That Scale the World</title><link>https://sainathmitalakar.github.io/#blog-2025-12-07</link><description>Google has long served as the benchmark for large-scale distributed computing, site reliability engineering (SRE),
     and the AI-first cloud era. From the origins of MapReduce and Borg to the global expansion of Google Cloud and Gemini AI,
-    the company continues to redefine the future of data-intensive infrastructure and autonomous software systems. What differentiates Google is its engineering foundation — a platform built on decades of research-driven innovation in
+    the company continues to redefine the future of data-intensive infrastructure and autonomous software systems. What differentiates Google is its a engineering foundation — a platform built on decades of research-driven innovation in
     distributed systems, planetary-scale networking, and machine learning. Today, Google is evolving into a fully AI-native
     computing ecosystem where intelligence, automation and elasticity are fundamental primitives. Google’s systems are built on principles that enable massive scale and reliability: These technologies are at the core of Google Cloud’s engineering backbone — designed not for individual systems,
     but for coordinated global platform operation. Google inventedSite Reliability Engineering (SRE)as a discipline that merges software engineering
