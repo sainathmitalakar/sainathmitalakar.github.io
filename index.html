@@ -948,6 +948,120 @@ InfraCodeBase - Production-Ready Infrastructure Blueprint Walkthrough</p>
     </header>
 
     <main id="blog-posts">
+      <!-- ================== BLOG (December 11, 2025) ================== -->
+<article id="blog-2025-12-11"
+  style="background:#0d1117; color:#e6edf3; padding:2.4rem; margin-bottom:2rem; border-radius:14px;
+         border:1px solid rgba(255,255,255,0.08); box-shadow:0 4px 14px rgba(0,0,0,0.4);">
+
+  <h2 style="color:#58a6ff;">AWS–GCP Interconnectivity: Enabling Private, High-Speed Multi-Cloud Networking</h2>
+  <time datetime="2025-12-11" style="color:#8b949e;">December 11, 2025</time>
+
+  <p>
+    Modern enterprises rarely stay inside a single cloud. As multi-cloud adoption accelerates, engineering teams need secure,
+    high-bandwidth, low-latency connections between AWS and Google Cloud. AWS–GCP interconnectivity enables exactly this:
+    <strong>private, dedicated, SLA-backed links</strong> between AWS VPCs and Google Cloud VPC networks without exposing traffic
+    to the public internet.
+  </p>
+
+  <p>
+    This type of multi-cloud backbone is essential for real-time data pipelines, hybrid microservice architectures, global failover,
+    and cross-platform analytics systems that must operate with consistent performance across providers.
+  </p>
+
+  <h3 style="color:#79c0ff;">Why AWS ↔ GCP Private Connectivity Matters</h3>
+
+  <p>
+    • <strong>Zero public internet exposure:</strong> Traffic stays on private fiber networks, reducing attack surface.<br><br>
+    • <strong>High throughput, predictable latency:</strong> Enables distributed systems across clouds to behave as one network.<br><br>
+    • <strong>Enterprise data compliance:</strong> Meets requirements for controlled paths (PCI-DSS, HIPAA, ISO, FedRAMP).<br><br>
+    • <strong>Multi-cloud HA/DR:</strong> Replicate workloads and datasets across AWS & GCP with minimum delay.<br><br>
+    • <strong>Cost-efficient peering:</strong> Cheaper for large, steady data flows compared to VPN-over-internet.
+  </p>
+
+  <h3 style="color:#ffa657;">How Interconnectivity Works (Technical Overview)</h3>
+
+  <p>
+    AWS and GCP do not connect directly. Instead, communication happens via <strong>dedicated physical links through partner colocation facilities</strong>.
+    The architecture typically uses:
+  </p>
+
+  <p>
+    1. <strong>AWS Direct Connect (DX)</strong> – dedicated fiber from AWS to a partner facility.<br><br>
+    2. <strong>Google Cloud Interconnect (GCI)</strong> – Google's dedicated connectivity counterpart.<br><br>
+    3. <strong>Cross-connects</strong> inside an Equinix/Megaport/Digital Realty data center.<br><br>
+    4. <strong>Partner-Cloud Routing (Megaport or Equinix Fabric)</strong> to interlink DX ↔ GCI paths.<br><br>
+
+    Once provisioned, both clouds advertise routes using <strong>BGP peering</strong>. Traffic flows through private circuits,
+    encrypted at higher layers (e.g., IPSec overlay if required).
+  </p>
+
+  <h3 style="color:#56d364;">Common Production Use Cases</h3>
+
+  <p>
+    • <strong>Cross-cloud microservices:</strong> Services deployed across AWS EKS and Google GKE communicate through private links.<br>
+    • <strong>Real-time analytics:</strong> Stream data from AWS Kinesis/Kafka into Google BigQuery via private backbone.<br>
+    • <strong>Multi-cloud AI pipelines:</strong> Use GCP Vertex AI with AWS S3/Redshift datasets securely.<br>
+    • <strong>Disaster recovery:</strong> Async replication between AWS RDS/Aurora and GCP Cloud SQL/Spanner.<br>
+    • <strong>Security-sensitive workloads:</strong> Financial, telecom, and healthcare applications requiring non-public routing.
+  </p>
+
+  <h3 style="color:#ff7b72;">Network Architecture Diagram (Conceptual)</h3>
+
+  <p>
+    <strong>AWS VPC → Direct Connect → Colo (Equinix/Megaport) → Cloud Interconnect → GCP VPC</strong><br><br>
+    Routing: <strong>BGP</strong> with private ASN exchange.<br>
+    Traffic: <strong>L2/L3 private links</strong>, optional IPSec overlays.
+  </p>
+
+  <h3 style="color:#58a6ff;">Security Best Practices</h3>
+
+  <p>
+    • Enforce <strong>resource-level IAM + VPC SC</strong> on GCP; <strong>IAM + SCP</strong> on AWS.<br>
+    • Enable <strong>route filters</strong> to prevent unwanted CIDR propagation.<br>
+    • Use <strong>Transit Gateway</strong> on AWS and <strong>VPC Network Peering</strong> or <strong>Cloud Router</strong> on GCP.<br>
+    • Deploy <strong>NACL + firewall rules</strong> to control cross-cloud traffic.<br>
+    • Use <strong>encryption-at-rest & TLS in motion</strong> even on private fiber.
+  </p>
+
+  <p style="margin-top:1rem; color:#8b949e;">Tags:
+    <strong>#AWS</strong> <strong>#GoogleCloud</strong> <strong>#MultiCloud</strong>
+    <strong>#DirectConnect</strong> <strong>#CloudInterconnect</strong>
+  </p>
+
+  <p style="margin-top:0.6rem; color:#8b949e;">
+    Reference Links:<br>
+    <a href="https://aws.amazon.com/directconnect/" target="_blank" style="color:#58a6ff;">AWS Direct Connect</a><br>
+    <a href="https://cloud.google.com/network-connectivity/docs/interconnect" target="_blank" style="color:#58a6ff;">Google Cloud Interconnect</a><br>
+    <a href="https://www.equinix.com/interconnection-services" target="_blank" style="color:#58a6ff;">Equinix Interconnection</a><br>
+    <a href="https://www.megaport.com/cloud/aws/" target="_blank" style="color:#58a6ff;">Megaport AWS–GCP Routing</a>
+  </p>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AWS–GCP Interconnectivity for Private, High-Speed Multi-Cloud Networking",
+    "author": { "@type": "Person", "name": "Sainath Shivaji Mitalakar" },
+    "datePublished": "2025-12-11",
+    "url": "https://sainathmitalakar.github.io/#blog-2025-12-11",
+    "description": "A detailed technical overview of how AWS and Google Cloud interconnectivity enables secure, private, high-speed networking using Direct Connect, Cloud Interconnect, and partner fabrics.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sainath Shivaji Mitalakar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sainathmitalakar.github.io/assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://sainathmitalakar.github.io/"
+    }
+  }
+  </script>
+</article>
+
       <!-- ================== BLOG (December 10, 2025) ================== -->
 <article id="blog-2025-12-10"
   style="background:#0d1117; color:#e6edf3; padding:2.4rem; margin-bottom:2rem; border-radius:14px;
