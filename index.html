@@ -974,6 +974,180 @@
     </header>
 
     <main id="blog-posts">
+
+      <!-- ================== BLOG (December 16, 2025) ================== -->
+<article id="blog-2025-12-16"
+  style="background:#0d1117; color:#e6edf3; padding:2.4rem; margin-bottom:2rem; border-radius:14px;
+         border:1px solid rgba(255,255,255,0.08); box-shadow:0 4px 14px rgba(0,0,0,0.4);">
+
+  <h2 style="color:#58a6ff;">
+    Why Facebook Doesn’t Use Git at Scale
+  </h2>
+  <time datetime="2025-12-16" style="color:#8b949e;">December 16, 2025</time>
+
+  <p>
+    Git is the industry standard for version control, powering millions of repositories worldwide.
+    Yet one of the largest engineering organizations on the planet—<strong>Facebook (Meta)</strong>—
+    does not rely on Git as its primary source control system at scale.
+  </p>
+
+  <p>
+    This decision is not about rejecting Git’s capabilities, but about addressing
+    <strong>extreme scale constraints</strong> that traditional distributed version control systems
+    were never designed to handle.
+  </p>
+
+  <h3 style="color:#79c0ff;">Facebook’s Engineering Scale Problem</h3>
+
+  <p>
+    Facebook operates a <strong>single monorepo</strong> containing billions of lines of code,
+    used by tens of thousands of engineers across multiple products.
+  </p>
+
+  <p>
+    At this scale, Git encounters fundamental bottlenecks:
+  </p>
+
+  <p>
+    • Repository size measured in terabytes<br>
+    • Millions of files with high churn<br>
+    • Thousands of commits per day<br>
+    • Developers needing fast checkouts and queries across the entire codebase<br>
+    • Global teams working concurrently on the same repository
+  </p>
+
+  <h3 style="color:#ffa657;">Where Git Breaks Down at Facebook Scale</h3>
+
+  <p>
+    Git is a <strong>distributed version control system</strong>, meaning every clone contains
+    the full repository history. This design works well for small-to-medium repositories,
+    but becomes problematic at extreme scale.
+  </p>
+
+  <p>
+    Key limitations include:
+  </p>
+
+  <p>
+    • <strong>Clone time:</strong> Cloning Facebook’s monorepo using Git would take hours or days.<br><br>
+    • <strong>Disk usage:</strong> Full history replication consumes massive local storage.<br><br>
+    • <strong>Performance degradation:</strong> Commands like <code>git status</code>, <code>git log</code>,
+      and <code>git grep</code slow dramatically on huge repos.<br><br>
+    • <strong>Metadata overhead:</strong> Git’s object database becomes a scaling bottleneck with
+      millions of objects.
+  </p>
+
+  <h3 style="color:#56d364;">What Facebook Uses Instead: Mercurial + Custom Systems</h3>
+
+  <p>
+    Facebook adopted <strong>Mercurial (Hg)</strong> as the foundation for its source control
+    and built extensive custom infrastructure on top of it.
+  </p>
+
+  <p>
+    Key components of Facebook’s approach:
+  </p>
+
+  <p>
+    • <strong>Monorepo architecture:</strong> A single shared source of truth for all services.<br>
+    • <strong>Shallow and partial checkouts:</strong> Engineers fetch only what they need.<br>
+    • <strong>Server-side intelligence:</strong> Heavy computation pushed to backend services.<br>
+    • <strong>Custom file system (Watchman):</strong> Efficient file change detection at scale.<br>
+    • <strong>Code review system:</strong> Tight integration with internal tooling for CI and testing.
+  </p>
+
+  <h3 style="color:#ff7b72;">Why Mercurial Worked Better Than Git</h3>
+
+  <p>
+    Mercurial offered architectural advantages that aligned better with Facebook’s needs:
+  </p>
+
+  <p>
+    • Simpler internal data model<br>
+    • Better performance with very large repositories<br>
+    • Easier extensibility for custom workflows<br>
+    • Strong support for centralized optimizations while retaining DVCS benefits
+  </p>
+
+  <p>
+    Facebook later open-sourced several tools (like <strong>EdenFS</strong> and <strong>Mononoke</strong>)
+    to improve large-scale version control performance—many of which also benefit Git ecosystems today.
+  </p>
+
+  <h3 style="color:#58a6ff;">Does This Mean Git Is Bad?</h3>
+
+  <p>
+    Absolutely not.
+  </p>
+
+  <p>
+    Git remains the best choice for the vast majority of teams and organizations.
+    Facebook’s case is an <strong>extreme outlier</strong>, driven by:
+  </p>
+
+  <p>
+    • Massive monorepo size<br>
+    • Ultra-high commit velocity<br>
+    • Global developer concurrency<br>
+    • Deep integration with custom infrastructure
+  </p>
+
+  <p>
+    For most companies, Git—combined with modern tooling like sparse checkouts,
+    partial clones, and CI optimization—is more than sufficient.
+  </p>
+
+  <h3 style="color:#58a6ff;">Engineering Takeaway</h3>
+
+  <p>
+    Tooling choices at hyperscale are rarely about trends—they are about physics.
+  </p>
+
+  <p>
+    Facebook’s move away from Git highlights a key lesson:
+    <strong>architecture decisions must scale with organizational reality</strong>.
+    What works perfectly for thousands of developers may fail for tens of thousands
+    operating on a single, constantly changing codebase.
+  </p>
+
+  <p style="margin-top:1rem; color:#8b949e;">Tags:
+    <strong>#FacebookEngineering</strong> <strong>#Git</strong> <strong>#Monorepo</strong>
+    <strong>#DeveloperTools</strong> <strong>#Scalability</strong>
+  </p>
+
+  <p style="margin-top:0.6rem; color:#8b949e;">
+    Reference Links:<br>
+    <a href="https://engineering.fb.com" target="_blank" style="color:#58a6ff;">Facebook Engineering Blog</a><br>
+    <a href="https://www.mercurial-scm.org/" target="_blank" style="color:#58a6ff;">Mercurial SCM</a><br>
+    <a href="https://engineering.fb.com/2017/04/06/developer-tools/scaling-mercurial-at-facebook/" target="_blank" style="color:#58a6ff;">Scaling Mercurial at Facebook</a>
+  </p>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why Facebook Doesn’t Use Git at Scale",
+    "author": { "@type": "Person", "name": "Sainath Shivaji Mitalakar" },
+    "datePublished": "2025-12-16",
+    "url": "https://sainathmitalakar.github.io/#blog-2025-12-16",
+    "description": "A deep technical explanation of why Facebook does not rely on Git at scale, and how extreme monorepo size and developer concurrency led to custom version control solutions.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sainath Shivaji Mitalakar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sainathmitalakar.github.io/assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://sainathmitalakar.github.io/"
+    }
+  }
+  </script>
+</article>
+
       <!-- ================== BLOG (December 15, 2025) ================== -->
 <article id="blog-2025-12-15"
   style="background:#0d1117; color:#e6edf3; padding:2.4rem; margin-bottom:2rem; border-radius:14px;
