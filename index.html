@@ -974,6 +974,187 @@
     </header>
 
     <main id="blog-posts">
+      
+      <!-- ================== BLOG (December 22, 2025) ================== -->
+<article id="blog-2025-12-22"
+  style="background:#0d1117; color:#e6edf3; padding:2.4rem; margin-bottom:2rem; border-radius:14px;
+         border:1px solid rgba(255,255,255,0.08); box-shadow:0 4px 14px rgba(0,0,0,0.4);">
+
+  <h2 style="color:#58a6ff;">
+    EVM on Cloud: Reimagining Secure, Scalable, and Auditable Digital Voting
+  </h2>
+  <time datetime="2025-12-22" style="color:#8b949e;">December 22, 2025</time>
+
+  <p>
+    Electronic Voting Machines (EVMs) have traditionally been designed as isolated, air-gapped systems
+    to ensure integrity and tamper resistance. However, as democracies scale, voting infrastructure
+    faces new challenges: real-time verification, audit transparency, operational resilience, and
+    nationwide scalability.
+  </p>
+
+  <p>
+    Cloud-enabled EVM architectures introduce a controlled evolution —
+    not replacing physical voting, but <strong>augmenting it with secure cloud-backed verification,
+    auditability, and resilience layers</strong>.
+  </p>
+
+  <h3 style="color:#79c0ff;">Why Bring Cloud Into the Voting Architecture?</h3>
+
+  <p>
+    Modern elections operate at massive scale with complex logistics.
+    Cloud platforms provide capabilities that traditional offline systems struggle to deliver:
+  </p>
+
+  <p>
+    • Elastic infrastructure for nationwide election events<br>
+    • Centralized, immutable audit trails<br>
+    • Disaster recovery and fault tolerance<br>
+    • Cryptographic verification at scale<br>
+    • Controlled transparency for observers and regulators
+  </p>
+
+  <h3 style="color:#ffa657;">Reference Architecture: EVM + Cloud Control Plane</h3>
+
+  <p>
+    A cloud-assisted EVM system typically follows a layered design:
+  </p>
+
+  <p>
+    1. <strong>Physical Voting Layer:</strong><br>
+       Standalone EVMs or ballot devices that capture votes locally and remain operational even
+       during network isolation.
+  </p>
+
+  <p>
+    2. <strong>Secure Sync Gateway:</strong><br>
+       A hardened gateway that transmits signed vote metadata or hashes — never raw ballots —
+       to the cloud during approved synchronization windows.
+  </p>
+
+  <p>
+    3. <strong>Cloud Verification Layer:</strong><br>
+       Cloud services validate cryptographic signatures, detect anomalies, and enforce integrity checks.
+  </p>
+
+  <p>
+    4. <strong>Audit & Observability Layer:</strong><br>
+       Immutable logs, real-time dashboards, and tamper-evident storage for post-election audits.
+  </p>
+
+  <h3 style="color:#56d364;">Security Principles That Cannot Be Compromised</h3>
+
+  <p>
+    Any cloud-enabled voting system must adhere to strict non-negotiable principles:
+  </p>
+
+  <p>
+    • End-to-end cryptographic integrity (hashing, signing, verification)<br>
+    • No direct internet dependency during vote casting<br>
+    • Hardware-backed trust (TPM / HSM integration)<br>
+    • Immutable, append-only audit logs<br>
+    • Zero trust access for operators and administrators
+  </p>
+
+  <h3 style="color:#ff7b72;">Cloud Technologies Commonly Used</h3>
+
+  <p>
+    Production-grade implementations typically leverage:
+  </p>
+
+  <p>
+    • Confidential computing (secure enclaves)<br>
+    • Hardware Security Modules (HSMs) for key custody<br>
+    • Object storage with immutability (WORM policies)<br>
+    • Event-driven pipelines for vote metadata processing<br>
+    • Observability stacks for real-time integrity monitoring
+  </p>
+
+  <h3 style="color:#d2a8ff;">Blockchain vs Cloud: A Practical Reality Check</h3>
+
+  <p>
+    While blockchain is often discussed for digital voting, many election systems prefer
+    cloud-native cryptographic audit trails due to:
+  </p>
+
+  <p>
+    • Lower operational complexity<br>
+    • Clear regulatory control<br>
+    • Deterministic performance at national scale<br>
+    • Easier governance and rollback mechanisms
+  </p>
+
+  <p>
+    Blockchain may complement audit verification,
+    but cloud systems remain the operational backbone.
+  </p>
+
+  <h3 style="color:#58a6ff;">Key Risks and Mitigations</h3>
+
+  <p>
+    • <strong>Centralization risk:</strong> Mitigated via multi-region, multi-account isolation<br>
+    • <strong>Insider threats:</strong> Addressed with zero-trust access and mandatory approvals<br>
+    • <strong>Data tampering:</strong> Prevented using cryptographic sealing and immutable storage<br>
+    • <strong>Public trust:</strong> Maintained through transparent audits and verifiable logs
+  </p>
+
+  <h3 style="color:#58a6ff;">Final Perspective</h3>
+
+  <p>
+    Cloud-enabled EVM architectures are not about moving voting to the internet.
+    They are about strengthening trust, resilience, and auditability
+    while preserving the physical integrity of the voting process.
+  </p>
+
+  <p>
+    When designed correctly, cloud becomes a <strong>verifier and guardian</strong>,
+    not a point of control — enabling elections that are scalable, observable,
+    and defensible in the face of modern challenges.
+  </p>
+
+  <p style="margin-top:1rem; color:#8b949e;">Tags:
+    <strong>#EVM</strong> <strong>#CloudArchitecture</strong>
+    <strong>#DigitalVoting</strong> <strong>#ElectionSecurity</strong>
+    <strong>#SecureSystems</strong>
+  </p>
+
+  <p style="margin-top:0.6rem; color:#8b949e;">
+    Reference Links:<br>
+    <a href="https://www.nist.gov/itl/voting" target="_blank" style="color:#58a6ff;">
+      NIST Voting Systems Guidelines
+    </a><br>
+    <a href="https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines" target="_blank" style="color:#58a6ff;">
+      NIST Cryptographic Standards
+    </a><br>
+    <a href="https://cloud.google.com/security/confidential-computing" target="_blank" style="color:#58a6ff;">
+      Confidential Computing
+    </a>
+  </p>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "EVM on Cloud: Reimagining Secure, Scalable, and Auditable Digital Voting",
+    "author": { "@type": "Person", "name": "Sainath Shivaji Mitalakar" },
+    "datePublished": "2025-12-22",
+    "url": "https://sainathmitalakar.github.io/#blog-2025-12-22",
+    "description": "A technical exploration of how cloud-backed architectures can enhance the security, auditability, and resilience of electronic voting systems.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sainath Shivaji Mitalakar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sainathmitalakar.github.io/assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://sainathmitalakar.github.io/"
+    }
+  }
+  </script>
+</article>
       <!-- ================== BLOG (December 21, 2025) ================== -->
 <article id="blog-2025-12-21"
   style="background:#0d1117; color:#e6edf3; padding:2.4rem; margin-bottom:2rem; border-radius:14px;
