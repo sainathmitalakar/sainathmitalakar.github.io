@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>AI Agents in DevOps (2026): From Automation to Governed Intelligence</title><link>https://sainathmitalakar.github.io/#blog-2026-01-01</link><description>As we enter 2026, DevOps has crossed a defining boundary.
+<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>Why Platform Engineering Becomes the CEO’s Problem in 2026</title><link>https://sainathmitalakar.github.io/#blog-2026-01-02</link><description>Platform Engineering was once viewed as an internal engineering concern —
+    something delegated to DevOps, SRE, or infrastructure teams. In 2026, that assumption no longer holds.
+    Platform reliability, governance, and scalability now directly shapebusiness velocity, risk exposure, hiring outcomes, and enterprise trust.
+    As a result, platform engineering has quietly become a CEO-level responsibility. Over the last five years, enterprises experienced a structural shift: • Multi-cloud and hybrid architectures became default• AI-driven automation accelerated infrastructure changes• Security, compliance, and cost controls tightened globally• Engineering teams scaled faster than governance models Platforms grew faster than leadership visibility.
+    That imbalance created operational fragility at scale. Platform engineering failures no longer stay technical.
+    They surface as: • Missed revenue due to outages or slow releases• Security incidents and regulatory exposure• Cloud cost overruns with no clear ownership• Engineering burnout and attrition• Loss of enterprise customer confidence These are not engineering metrics.
+    They are board-level outcomes. Leadership wants: • Faster delivery• Lower risk• Predictable costs• Scalable teams Traditional platform tooling delivers speed —
+    but often at the cost of consistency, security, and control. Velocity without governance breaks trust. Infracodebase redefines platform engineering
+    by embeddinggoverned intelligencedirectly into
+    infrastructure workflows. Instead of relying on tribal knowledge or ad-hoc automation,
+    Infracodebase enables: • Policy-aware infrastructure generation and validation• AI agents that understand existing environments• Early detection of security, cost, and architectural risk• Standardized patterns across teams and regions• Audit-ready, leadership-friendly outputs This shifts platform engineering from reactive operations
+    to proactive business enablement. With Infracodebase-driven platforms, leadership gains: • Predictable delivery timelines• Reduced operational surprises• Clear accountability and visibility• Faster scaling without platform rewrites• Confidence in AI-driven execution Platform engineering becomes an asset —
+    not a risk multiplier. In 2026, winning companies treat platforms as: • Products, not projects• Governed systems, not scripts• Strategic leverage, not cost centers Infracodebase enables this transition
+    by aligning engineering execution with business intent. Platform engineering is no longer invisible. When platforms fail, growth stalls.
+    When platforms scale with governance,
+    businesses move faster with confidence. In 2026, CEOs don’t need to manage infrastructure —
+    but they do need platforms that arepredictable, auditable, and intelligently governed. Tags:#PlatformEngineering#DevOpsLeadership#CEOAgenda#GovernedAI#Infracodebase</description><pubDate>Fri, 02 Jan 2026 00:00:00 +0530</pubDate><guid>https://sainathmitalakar.github.io/#blog-2026-01-02</guid></item><item><title>AI Agents in DevOps (2026): From Automation to Governed Intelligence</title><link>https://sainathmitalakar.github.io/#blog-2026-01-01</link><description>As we enter 2026, DevOps has crossed a defining boundary.
     Automation alone is no longer the differentiator.
     The competitive edge now belongs to organizations that operateAI agents as governed, trusted participantsinside their infrastructure lifecycle. AI agents are no longer experimental copilots.
     They are becomingvirtual DevOps engineers—
