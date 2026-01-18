@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>The Invisible Constitution of the Digital World: How Infrastructure Writes the Rules of Society</title><link>https://sainathmitalakar.github.io/#blog-2026-01-17</link><description>Every society has a constitution.
+<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>The Collapse of “IT Support”: Why Infrastructure Is Becoming the Center of Power</title><link>https://sainathmitalakar.github.io/#blog-2026-01-18</link><description>For decades, infrastructure was treated as a background function —
+    something that existed to “support the business.” Servers ran quietly.
+    Networks were invisible.
+    DevOps teams were paged only when something broke. That era is over. Infrastructure is no longer support.
+      Infrastructure is power. Modern organizations do not run on buildings or paperwork.
+    They run on platforms. • Revenue flows through APIs• Customer trust depends on uptime• Compliance is enforced by pipelines• Innovation speed is dictated by deployment architecture When infrastructure fails, the business does not slow —
+    it stops. Calling infrastructure “support” assumes: • Business logic lives elsewhere• Failures are exceptional• Decisions are reversible• Systems are static None of these assumptions hold in cloud- and AI-driven systems. Infrastructure decisions now determine:
+    cost structure, security posture, scalability limits,
+    and even regulatory exposure. AI does not replace infrastructure —
+    it amplifies it. AI systems consume infrastructure as their nervous system:
+    compute, data pipelines, identity, observability, and policy. Whoever controls infrastructure constraints
+    controls how AI behaves in the real world. Intelligence without infrastructure is theory.
+    Infrastructure without governance is chaos. The future organization replaces “IT departments” with: • Platform engineering teams• Infrastructure governance layers• Policy-as-code enforcement• AI-assisted decision systems These teams don’t just execute requests.
+    They define what is possible. Power now sits with those who can: • Define platform defaults• Encode policies into pipelines• Control access to data and compute• Balance speed against systemic risk This is not accidental power.
+    It is structural power. When power is invisible, it goes unchecked. Infrastructure teams are often making
+    civilization-scale decisions inside organizations
+    without formal mandate, oversight, or accountability. This is how fragility enters systems —
+    quietly and unintentionally. Engineers can no longer say,
+    “I just implemented the requirement.” Implementation is policy.
+    Defaults are decisions.
+    Automation is authority. With great leverage comes unavoidable responsibility. Every organization believes power lives at the top. In reality, power lives where constraints are defined. Today, those constraints are written in infrastructure. The companies and nations that understand this
+      will not ask infrastructure to “support” strategy —
+      they will build strategy on top of it. Tags:#InfrastructurePower#PlatformEngineering#DevOpsLeadership#AIInfrastructure#SystemsThinking</description><pubDate>Sun, 18 Jan 2026 00:00:00 +0530</pubDate><guid>https://sainathmitalakar.github.io/#blog-2026-01-18</guid></item><item><title>The Invisible Constitution of the Digital World: How Infrastructure Writes the Rules of Society</title><link>https://sainathmitalakar.github.io/#blog-2026-01-17</link><description>Every society has a constitution.
     Most are written in law books, debated in parliaments, and interpreted by courts. But the digital world runs on a different kind of constitution —
     one that is never voted on, rarely questioned, and almost never understood. It is written in infrastructure. APIs decide who can participate.
     Identity systems decide who exists.
