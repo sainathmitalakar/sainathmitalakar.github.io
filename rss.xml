@@ -1,5 +1,40 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>From Code to Command: How Infrastructure Quietly Became the Highest Form of Power</title><link>https://sainathmitalakar.github.io/#blog-2026-01-19</link><description>Power was once loud. It marched in armies.
+<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>The Silent Coup: How Engineers Replaced Institutions Without Elections</title><link>https://sainathmitalakar.github.io/#blog-2026-01-20</link><description>No flags were raised.
+    No governments fell.
+    No constitutions were rewritten. And yet —
+    power changed hands. Quietly. Systematically. Permanently. History teaches us to recognize coups
+    by their noise. Tanks.
+    Speeches.
+    Emergency broadcasts. This one arrived differently. It shipped as code.
+    It rolled out as platforms.
+    It enforced itself as defaults. No one voted —
+    yet everyone complies. Governments still legislate.
+    Boards still approve.
+    Policies are still written. But execution moved elsewhere. Real authority now lives in: • Identity systems• Cloud permissions• Network architectures• CI/CD pipelines• Automated enforcement layers Institutions speak.
+    Infrastructure decides. Engineers did not seize power.
+    Power leaked to them. Every time scale increased,
+    humans were removed from the loop. Decisions became: • Encoded instead of debated• Automated instead of reviewed• Enforced instead of negotiated Those who build the systems
+    define reality’s boundaries. We were told systems are neutral. They are not. Every architectural choice embeds: • Values• Trade-offs• Incentives• Exclusions A rate limit is a political decision.
+    A default permission is a moral one. Neutrality was the story —
+    not the truth. AI did not create this shift.
+    It exposed it. AI systems obey infrastructure,
+    not laws. They inherit: • Data access rules• Compute constraints• Deployment pipelines• Observability boundaries Whoever controls infrastructure
+    governs AI behavior —
+    by design. Because it worked. Systems scaled.
+    Costs optimized.
+    Delivery accelerated. Convenience replaced consent.
+    Efficiency replaced accountability. The coup was welcomed —
+    not resisted. Power no longer needs legitimacy
+    when it has dependency. You don’t argue with infrastructure.
+    You adapt to it. This is not tyranny.
+    It is something new. A world governed by systems,
+      built by engineers,
+      inherited by everyone else. The most important political actors of the 21st century
+    do not wear suits. They write Terraform.
+    They design platforms.
+    They set defaults. The silent coup succeeded
+      because no one realized
+      it was happening. Tags:#InfrastructurePower#DigitalGovernance#DevOpsPhilosophy#AIInfrastructure#SystemsOfControl</description><pubDate>Tue, 20 Jan 2026 00:00:00 +0530</pubDate><guid>https://sainathmitalakar.github.io/#blog-2026-01-20</guid></item><item><title>From Code to Command: How Infrastructure Quietly Became the Highest Form of Power</title><link>https://sainathmitalakar.github.io/#blog-2026-01-19</link><description>Power was once loud. It marched in armies.
     It spoke through governments.
     It enforced itself with visible authority. Today, power is silent. It executes through infrastructure. No declaration was made.
     No election was held. Yet control quietly shifted from institutions
