@@ -1,5 +1,37 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>The New Non-Aligned Movement: How Nations Will Choose Infrastructure, Not Ideology</title><link>https://sainathmitalakar.github.io/#blog-2026-01-26</link><description>During the Cold War, nations aligned themselves around ideology. Capitalism or socialism.
+<rss version="2.0"><channel><title>Sainath Mitalakar Portfolio Blogs</title><link>https://sainathmitalakar.github.io</link><description>Latest blogs from Sainath Shivaji Mitalakar</description><language>en-us</language><item><title>The Final Illusion: Why “Neutral Technology” Never Existed ?</title><link>https://sainathmitalakar.github.io/#blog-2026-01-30</link><description>Technology has always claimed neutrality. Faster tools.
+    Better efficiency.
+    Objective systems. This was never true. Decisions are embedded in: • Defaults• Thresholds• Access rules• Optimization targets These are not technical choices.
+    They are value judgments. Claiming neutrality avoids responsibility. It allows builders to say: “The system decided.” Systems do not decide.
+    People decide —
+    then encode those decisions. As infrastructure scales globally,
+    its values scale with it. A single platform decision
+    can affect millions of lives. Neutrality becomes abdication. Engineers can no longer hide behind tooling. Building systems is shaping society. Every deployment is a stance.
+    Every automation is a choice. The question is not whether technology has values. The question is
+      whose values get encoded —
+      and who gets excluded.</description><pubDate>Fri, 30 Jan 2026 00:00:00 +0530</pubDate><guid>https://sainathmitalakar.github.io/#blog-2026-01-30</guid></item><item><title>Infrastructure Debt: The Risk No Balance Sheet Can See</title><link>https://sainathmitalakar.github.io/#blog-2026-01-29</link><description>Financial debt is visible.
+    Technical debt is discussed. Infrastructure debt is ignored —
+    until it collapses systems. Infrastructure debt accumulates when: • Temporary fixes become permanent• Defaults replace deliberate design• Automation lacks governance• Knowledge lives in people, not systems It compounds silently. Infrastructure debt does not show up as: • Immediate outages• Line-item costs• Missed quarterly targets It shows up later —
+    as fragility, fear, and paralysis. AI dramatically increases infrastructure debt
+    when used without governance. Faster change means faster decay
+    if structure is absent. Speed without discipline
+    only accelerates collapse. Infrastructure debt eventually forces: • Massive rewrites• Emergency freezes• Talent burnout• Lost trust from customers and regulators These costs arrive suddenly —
+    but were accumulated slowly. The most dangerous debt
+    is the one leadership never sees. Infrastructure debt decides
+      how far an organization can grow —
+      and when it must stop.</description><pubDate>Thu, 29 Jan 2026 00:00:00 +0530</pubDate><guid>https://sainathmitalakar.github.io/#blog-2026-01-29</guid></item><item><title>The Right to Override: Why Human Intervention Must Be Designed Into AI Infrastructure</title><link>https://sainathmitalakar.github.io/#blog-2026-01-28</link><description>Automation promises speed.
+    AI promises intelligence. But neither promises mercy. Any system that cannot be interrupted
+      will eventually harm the people it serves. Modern infrastructure is designed to eliminate friction. • Auto-scaling reacts faster than humans• Risk engines block transactions instantly• AI agents execute decisions without pause• Pipelines deploy without manual gates This is operationally impressive.
+    It is also dangerous. Many systems treat human override as an exception. In reality, override is a safety feature. Aviation, nuclear systems, and medical devices
+    all assume automated failure — and design around it. Infrastructure rarely does. AI systems optimize based on: • Historical data• Defined objectives• Encoded constraints They cannot understand moral context,
+    political consequences,
+    or human dignity. Expecting them to act wisely
+    without human interruption
+    is negligence. Responsible infrastructure must include: • Explicit kill-switches• Tiered authority levels• Time-bound execution locks• Explainable decision trails• Human-in-the-loop checkpoints These are not technical add-ons.
+    They are ethical requirements. This is the hardest question. • Engineers?• Executives?• Regulators?• Citizens? Without clarity, override becomes chaos.
+    With too much control, it becomes tyranny. Intelligence without interruption
+    is not progress. The future belongs to systems
+      that know when to stop. Tags:#HumanInTheLoop#AIInfrastructure#OverrideDesign#SystemsSafety</description><pubDate>Wed, 28 Jan 2026 00:00:00 +0530</pubDate><guid>https://sainathmitalakar.github.io/#blog-2026-01-28</guid></item><item><title>The New Non-Aligned Movement: How Nations Will Choose Infrastructure, Not Ideology</title><link>https://sainathmitalakar.github.io/#blog-2026-01-26</link><description>During the Cold War, nations aligned themselves around ideology. Capitalism or socialism.
     East or West. Today, ideology matters less than uptime. The next global alignment will be decided by infrastructure. Modern states cannot function without: • Digital identity systems• Payment rails• Cloud and AI infrastructure• Telecom and data backbones• Secure compute capacity These systems are not philosophical.
     They are operational. When infrastructure fails,
     ideology offers no recovery plan. Nations are quietly aligning themselves based on: • Cloud providers they depend on• AI platforms they integrate with• Data residency rules they accept• Compute supply chains they trust This alignment is rarely debated publicly —
